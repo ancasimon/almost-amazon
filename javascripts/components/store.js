@@ -1,11 +1,12 @@
-// Because we are importing printToDom from another File, that file name (utilities in our case) needs to now go in front of the printToDom function name. 
+// Because we are importing printToDom from another file, that file name (utilities in our case) needs to now go in front of the printToDom function name. 
 
 import utilities from '../helpers/utilities.js';
 import bookData from '../helpers/data/bookData.js';
 import cart from '../components/cart.js';
 
 const addToCartEvent = () => {
-    cart.cartToDom();    
+    const book = bookData.getBook();
+    cart.addToCart(book);    
     };
 
 
